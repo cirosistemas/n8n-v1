@@ -1,7 +1,7 @@
 import type { ChatOptions } from '@n8n/chat/types';
 
 export const defaultOptions: ChatOptions = {
-	webhookUrl: 'http://localhost:5678',
+	webhookUrl: 'https://n8n-ciro-production.up.railway.app',
 	webhookConfig: {
 		method: 'POST',
 		headers: {},

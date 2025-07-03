@@ -69,7 +69,7 @@ describe('OAuth2 API', () => {
 		expect(parseQs(authUrl.search.slice(1))).toEqual({
 			access_type: 'offline',
 			client_id: 'client_id',
-			redirect_uri: 'http://localhost:5678/rest/oauth2-credential/callback',
+			redirect_uri: 'https://n8n-ciro-production.up.railway.app/rest/oauth2-credential/callback',
 			response_type: 'code',
 			state,
 			scope: 'openid',

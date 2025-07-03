@@ -93,7 +93,7 @@ describe('SettingsApiView', () => {
 		const dateInTheFuture = DateTime.now().plus({ days: 1 });
 		const dateInThePast = DateTime.now().minus({ days: 1 });
 
-		rootStore.baseUrl = 'http://localhost:5678';
+		rootStore.baseUrl = 'https://n8n-ciro-production.up.railway.app';
 		settingsStore.publicApiPath = '/api';
 		settingsStore.publicApiLatestVersion = 1;
 		settingsStore.isPublicApiEnabled = true;
@@ -152,7 +152,7 @@ describe('SettingsApiView', () => {
 		const dateInTheFuture = DateTime.now().plus({ days: 1 });
 		const dateInThePast = DateTime.now().minus({ days: 1 });
 
-		rootStore.baseUrl = 'http://localhost:5678';
+		rootStore.baseUrl = 'https://n8n-ciro-production.up.railway.app';
 		settingsStore.publicApiPath = '/api';
 		settingsStore.publicApiLatestVersion = 1;
 		settingsStore.isPublicApiEnabled = true;

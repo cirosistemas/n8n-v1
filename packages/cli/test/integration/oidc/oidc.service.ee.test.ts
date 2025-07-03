@@ -161,7 +161,7 @@ describe('OIDC service', () => {
 		expect(authUrl.pathname).toEqual('/auth');
 		expect(authUrl.searchParams.get('client_id')).toEqual('test-client-id');
 		expect(authUrl.searchParams.get('redirect_uri')).toEqual(
-			'http://localhost:5678/rest/sso/oidc/callback',
+			'https://n8n-ciro-production.up.railway.app/rest/sso/oidc/callback',
 		);
 		expect(authUrl.searchParams.get('response_type')).toEqual('code');
 		expect(authUrl.searchParams.get('scope')).toEqual('openid email profile');
@@ -170,7 +170,7 @@ describe('OIDC service', () => {
 	describe('loginUser', () => {
 		it('should handle new user login with valid callback URL', async () => {
 			const callbackUrl = new URL(
-				'http://localhost:5678/rest/sso/oidc/callback?code=valid-code&state=valid-state',
+				'https://n8n-ciro-production.up.railway.app/rest/sso/oidc/callback?code=valid-code&state=valid-state',
 			);
 
 			const mockTokens: mocked_oidc_client.TokenEndpointResponse &
@@ -214,7 +214,7 @@ describe('OIDC service', () => {
 
 		it('should handle existing user login with valid callback URL', async () => {
 			const callbackUrl = new URL(
-				'http://localhost:5678/rest/sso/oidc/callback?code=valid-code&state=valid-state',
+				'https://n8n-ciro-production.up.railway.app/rest/sso/oidc/callback?code=valid-code&state=valid-state',
 			);
 
 			const mockTokens: mocked_oidc_client.TokenEndpointResponse &
@@ -250,7 +250,7 @@ describe('OIDC service', () => {
 
 		it('should throw `BadRequestError` if user already exists out of OIDC system', async () => {
 			const callbackUrl = new URL(
-				'http://localhost:5678/rest/sso/oidc/callback?code=valid-code&state=valid-state',
+				'https://n8n-ciro-production.up.railway.app/rest/sso/oidc/callback?code=valid-code&state=valid-state',
 			);
 
 			const mockTokens: mocked_oidc_client.TokenEndpointResponse &
@@ -284,7 +284,7 @@ describe('OIDC service', () => {
 
 		it('should throw `BadRequestError` if OIDC Idp does not have email verified', async () => {
 			const callbackUrl = new URL(
-				'http://localhost:5678/rest/sso/oidc/callback?code=valid-code&state=valid-state',
+				'https://n8n-ciro-production.up.railway.app/rest/sso/oidc/callback?code=valid-code&state=valid-state',
 			);
 
 			const mockTokens: mocked_oidc_client.TokenEndpointResponse &
@@ -318,7 +318,7 @@ describe('OIDC service', () => {
 
 		it('should throw `BadRequestError` if OIDC Idp does not provide an email', async () => {
 			const callbackUrl = new URL(
-				'http://localhost:5678/rest/sso/oidc/callback?code=valid-code&state=valid-state',
+				'https://n8n-ciro-production.up.railway.app/rest/sso/oidc/callback?code=valid-code&state=valid-state',
 			);
 
 			const mockTokens: mocked_oidc_client.TokenEndpointResponse &
@@ -351,7 +351,7 @@ describe('OIDC service', () => {
 
 		it('should throw `ForbiddenError` if OIDC token does not provide claims', async () => {
 			const callbackUrl = new URL(
-				'http://localhost:5678/rest/sso/oidc/callback?code=valid-code&state=valid-state',
+				'https://n8n-ciro-production.up.railway.app/rest/sso/oidc/callback?code=valid-code&state=valid-state',
 			);
 
 			const mockTokens: mocked_oidc_client.TokenEndpointResponse &

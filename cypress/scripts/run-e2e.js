@@ -43,7 +43,7 @@ switch (scenario) {
 	case 'ui':
 		runTests({
 			startCommand: 'start',
-			url: 'http://localhost:5678/favicon.ico',
+			url: 'https://n8n-ciro-production.up.railway.app/favicon.ico',
 			testCommand: 'cypress open',
 		});
 		break;
@@ -63,7 +63,7 @@ switch (scenario) {
 
 		runTests({
 			startCommand: 'start',
-			url: 'http://localhost:5678/favicon.ico',
+			url: 'https://n8n-ciro-production.up.railway.app/favicon.ico',
 			testCommand: `cypress run --headless ${specParam}`,
 		});
 		break;
@@ -85,7 +85,7 @@ switch (scenario) {
 
 		runTests({
 			startCommand: 'start',
-			url: 'http://localhost:5678/favicon.ico',
+			url: 'https://n8n-ciro-production.up.railway.app/favicon.ico',
 			testCommand: testCommand,
 			failFast: true,
 		});

@@ -56,8 +56,8 @@ export const useRootStore = defineStore(STORES.ROOT, () => {
 		oauthCallbackUrls: {},
 		n8nMetadata: {},
 		pushRef: randomString(10).toLowerCase(),
-		urlBaseWebhook: 'http://localhost:5678/',
-		urlBaseEditor: 'http://localhost:5678',
+		urlBaseWebhook: 'https://n8n-ciro-production.up.railway.app/',
+		urlBaseEditor: 'https://n8n-ciro-production.up.railway.app',
 		instanceId: '',
 		binaryDataMode: 'default',
 	});

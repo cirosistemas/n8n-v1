@@ -153,7 +153,7 @@ jobs:
           working-directory: cypress
           install: false
           start: pnpm start
-          wait-on: 'http://localhost:5678'
+          wait-on: 'https://n8n-ciro-production.up.railway.app'
           wait-on-timeout: 120
           record: ${{ inputs.record }}
           parallel: ${{ fromJSON( inputs.spec == 'e2e/*' && inputs.parallel || false ) }}

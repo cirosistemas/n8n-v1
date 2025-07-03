@@ -27,8 +27,8 @@ const windowOpenSpy = vi.spyOn(window, 'open');
 
 vi.mock('@n8n/stores/useRootStore', () => ({
 	useRootStore: () => ({
-		formWaitingUrl: 'http://localhost:5678/form-waiting',
-		webhookWaitingUrl: 'http://localhost:5678/webhook-waiting',
+		formWaitingUrl: 'https://n8n-ciro-production.up.railway.app/form-waiting',
+		webhookWaitingUrl: 'https://n8n-ciro-production.up.railway.app/webhook-waiting',
 	}),
 }));
 
@@ -295,7 +295,7 @@ describe('waitingNodeTooltip', () => {
 			},
 		};
 
-		const expectedUrl = 'http://localhost:5678/form-waiting/123';
+		const expectedUrl = 'https://n8n-ciro-production.up.railway.app/form-waiting/123';
 		expect(waitingNodeTooltip(node)).toBe(
 			`Waiting for form submission: <a href="${expectedUrl}" target="_blank">${expectedUrl}</a>`,
 		);
@@ -316,7 +316,7 @@ describe('waitingNodeTooltip', () => {
 			},
 		};
 
-		const expectedUrl = 'http://localhost:5678/webhook-waiting/123/test-suffix';
+		const expectedUrl = 'https://n8n-ciro-production.up.railway.app/webhook-waiting/123/test-suffix';
 		expect(waitingNodeTooltip(node)).toBe(
 			`Waiting for webhook call: <a href="${expectedUrl}" target="_blank">${expectedUrl}</a>`,
 		);
@@ -332,7 +332,7 @@ describe('waitingNodeTooltip', () => {
 			parameters: {},
 		};
 
-		const expectedUrl = 'http://localhost:5678/form-waiting/123';
+		const expectedUrl = 'https://n8n-ciro-production.up.railway.app/form-waiting/123';
 		expect(waitingNodeTooltip(node)).toBe(
 			`Waiting for form submission: <a href="${expectedUrl}" target="_blank">${expectedUrl}</a>`,
 		);
@@ -365,7 +365,7 @@ describe('waitingNodeTooltip', () => {
 			},
 		};
 
-		const expectedUrl = 'http://localhost:5678/webhook-waiting/123';
+		const expectedUrl = 'https://n8n-ciro-production.up.railway.app/webhook-waiting/123';
 		expect(waitingNodeTooltip(node)).toBe(
 			`Waiting for webhook call: <a href="${expectedUrl}" target="_blank">${expectedUrl}</a>`,
 		);
@@ -386,7 +386,7 @@ describe('waitingNodeTooltip', () => {
 			},
 		};
 
-		const expectedUrl = 'http://localhost:5678/webhook-waiting/123';
+		const expectedUrl = 'https://n8n-ciro-production.up.railway.app/webhook-waiting/123';
 		expect(waitingNodeTooltip(node)).toBe(
 			`Waiting for webhook call: <a href="${expectedUrl}" target="_blank">${expectedUrl}</a>`,
 		);

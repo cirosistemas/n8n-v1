@@ -40,7 +40,7 @@ const InvalidSamlSetting: Settings = {
 		loginLabel: '',
 		wantAssertionsSigned: true,
 		wantMessageSigned: true,
-		relayState: 'http://localhost:5678',
+		relayState: 'https://n8n-ciro-production.up.railway.app',
 		signatureConfig: {
 			prefix: 'ds',
 			location: { reference: '/samlp:Response/saml:Issuer', action: 'after' },
@@ -73,7 +73,7 @@ const SamlSettingWithInvalidUrl: Settings = {
 		loginLabel: '',
 		wantAssertionsSigned: true,
 		wantMessageSigned: true,
-		relayState: 'http://localhost:5678',
+		relayState: 'https://n8n-ciro-production.up.railway.app',
 		signatureConfig: {
 			prefix: 'ds',
 			location: { reference: '/samlp:Response/saml:Issuer', action: 'after' },
@@ -101,7 +101,7 @@ const SamlSettingWithInvalidUrlAndInvalidMetadataXML: Settings = {
 		loginLabel: '',
 		wantAssertionsSigned: true,
 		wantMessageSigned: true,
-		relayState: 'http://localhost:5678',
+		relayState: 'https://n8n-ciro-production.up.railway.app',
 		signatureConfig: {
 			prefix: 'ds',
 			location: { reference: '/samlp:Response/saml:Issuer', action: 'after' },
@@ -128,7 +128,7 @@ const SamlSettingWithValidUrl: Settings = {
 		loginLabel: '',
 		wantAssertionsSigned: true,
 		wantMessageSigned: true,
-		relayState: 'http://localhost:5678',
+		relayState: 'https://n8n-ciro-production.up.railway.app',
 		signatureConfig: {
 			prefix: 'ds',
 			location: { reference: '/samlp:Response/saml:Issuer', action: 'after' },
